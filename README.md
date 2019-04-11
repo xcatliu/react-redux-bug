@@ -1,5 +1,7 @@
 # Report a bug from react-redux
 
+Related issue: https://github.com/reduxjs/react-redux/issues/1230
+
 This project builds a simplest TODO App with:
 
 - react 16.8.6
