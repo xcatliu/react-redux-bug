@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux/lib';
 
 import { bindActionCreators } from 'redux';
 import { addTodo } from '../actions/todos';

@@ -86,39 +86,33 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
-  \**************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
+  \**********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
 function _assertThisInitialized(self) {
     if (self === void 0) {
         throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     }
     return self;
 }
-exports.default = _assertThisInitialized;
+module.exports = _assertThisInitialized;
 
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/extends.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
+  \********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
 function _extends() {
-    exports._extends = _extends = Object.assign || function (target) {
+    module.exports = _extends = Object.assign || function (target) {
         for (var i = 1; i < arguments.length; i++) {
             var source = arguments[i];
             for (var key in source) {
@@ -131,41 +125,87 @@ function _extends() {
     };
     return _extends.apply(this, arguments);
 }
-exports.default = _extends;
+module.exports = _extends;
 
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
+  \**************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
 function _inheritsLoose(subClass, superClass) {
     subClass.prototype = Object.create(superClass.prototype);
     subClass.prototype.constructor = subClass;
     subClass.__proto__ = superClass;
 }
-exports.default = _inheritsLoose;
+module.exports = _inheritsLoose;
 
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
-  \*********************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        "default": obj
+    };
+}
+module.exports = _interopRequireDefault;
 
-Object.defineProperty(exports, "__esModule", { value: true });
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) {
+        return obj;
+    }
+    else {
+        var newObj = {};
+        if (obj != null) {
+            for (var key in obj) {
+                if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                    var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
+                    if (desc.get || desc.set) {
+                        Object.defineProperty(newObj, key, desc);
+                    }
+                    else {
+                        newObj[key] = obj[key];
+                    }
+                }
+            }
+        }
+        newObj["default"] = obj;
+        return newObj;
+    }
+}
+module.exports = _interopRequireWildcard;
+
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
 function _objectWithoutPropertiesLoose(source, excluded) {
     if (source == null)
         return {};
@@ -180,7 +220,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
     }
     return target;
 }
-exports.default = _objectWithoutPropertiesLoose;
+module.exports = _objectWithoutPropertiesLoose;
 
 
 /***/ }),
@@ -20902,49 +20942,56 @@ else {
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/components/Context.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-redux/es/components/Context.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-exports.ReactReduxContext = react_1.default.createContext(null);
-exports.default = exports.ReactReduxContext;
-
-
-/***/ }),
-
-/***/ "./node_modules/react-redux/es/components/Provider.js":
+/***/ "./node_modules/react-redux/lib/components/Context.js":
 /*!************************************************************!*\
-  !*** ./node_modules/react-redux/es/components/Provider.js ***!
+  !*** ./node_modules/react-redux/lib/components/Context.js ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var assertThisInitialized_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-var inheritsLoose_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var prop_types_1 = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-var Context_1 = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
-var Subscription_1 = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.default = exports.ReactReduxContext = void 0;
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var ReactReduxContext = _react.default.createContext(null);
+exports.ReactReduxContext = ReactReduxContext;
+var _default = ReactReduxContext;
+exports.default = _default;
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/lib/components/Provider.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-redux/lib/components/Provider.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.default = void 0;
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js"));
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+var _Context = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/lib/components/Context.js");
+var _Subscription = _interopRequireDefault(__webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/lib/utils/Subscription.js"));
 var Provider = 
 /*#__PURE__*/
 function (_Component) {
-    inheritsLoose_1.default(Provider, _Component);
+    (0, _inheritsLoose2.default)(Provider, _Component);
     function Provider(props) {
         var _this;
         _this = _Component.call(this, props) || this;
         var store = props.store;
-        _this.notifySubscribers = _this.notifySubscribers.bind(assertThisInitialized_1.default(_this));
-        var subscription = new Subscription_1.default(store);
+        _this.notifySubscribers = _this.notifySubscribers.bind((0, _assertThisInitialized2.default)(_this));
+        var subscription = new _Subscription.default(store);
         subscription.onStateChange = _this.notifySubscribers;
         _this.state = {
             store: store,
@@ -20970,7 +21017,7 @@ function (_Component) {
     _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
         if (this.props.store !== prevProps.store) {
             this.state.subscription.tryUnsubscribe();
-            var subscription = new Subscription_1.default(this.props.store);
+            var subscription = new _Subscription.default(this.props.store);
             subscription.onStateChange = this.notifySubscribers;
             this.setState({
                 store: this.props.store,
@@ -20982,45 +21029,50 @@ function (_Component) {
         this.state.subscription.notifyNestedSubs();
     };
     _proto.render = function render() {
-        var Context = this.props.context || Context_1.ReactReduxContext;
-        return react_1.default.createElement(Context.Provider, {
+        var Context = this.props.context || _Context.ReactReduxContext;
+        return _react.default.createElement(Context.Provider, {
             value: this.state
         }, this.props.children);
     };
     return Provider;
-}(react_1.Component);
+}(_react.Component);
 Provider.propTypes = {
-    store: prop_types_1.default.shape({
-        subscribe: prop_types_1.default.func.isRequired,
-        dispatch: prop_types_1.default.func.isRequired,
-        getState: prop_types_1.default.func.isRequired
+    store: _propTypes.default.shape({
+        subscribe: _propTypes.default.func.isRequired,
+        dispatch: _propTypes.default.func.isRequired,
+        getState: _propTypes.default.func.isRequired
     }),
-    context: prop_types_1.default.object,
-    children: prop_types_1.default.any
+    context: _propTypes.default.object,
+    children: _propTypes.default.any
 };
-exports.default = Provider;
+var _default = Provider;
+exports.default = _default;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/components/connectAdvanced.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/react-redux/es/components/connectAdvanced.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/react-redux/lib/components/connectAdvanced.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-redux/lib/components/connectAdvanced.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var extends_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-var objectWithoutPropertiesLoose_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-var hoist_non_react_statics_1 = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
-var invariant_1 = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var react_is_1 = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-var Subscription_1 = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
-var Context_1 = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js"); // Define some constant arrays just to avoid re-creating these
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.default = connectAdvanced;
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+var _hoistNonReactStatics = _interopRequireDefault(__webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"));
+var _invariant = _interopRequireDefault(__webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js"));
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var _reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+var _Subscription = _interopRequireDefault(__webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/lib/utils/Subscription.js"));
+var _Context = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/lib/components/Context.js");
+// Define some constant arrays just to avoid re-creating these
 var EMPTY_ARRAY = [];
 var NO_SUBSCRIPTION_ARRAY = [null, null];
 var stringifyComponent = function stringifyComponent(Comp) {
@@ -21042,7 +21094,7 @@ var initStateUpdates = function initStateUpdates() {
 // useLayoutEffect in the browser. We need useLayoutEffect because we want
 // `connect` to perform sync updates to a ref to save the latest props after
 // a render is actually committed to the DOM.
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' ? react_1.useLayoutEffect : react_1.useEffect;
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;
 function connectAdvanced(
 /*
   selectorFactory is a func that is responsible for returning the selector function used to
@@ -21065,19 +21117,19 @@ _ref) {
     }
     var _ref2 = _ref, _ref2$getDisplayName = _ref2.getDisplayName, getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
         return "ConnectAdvanced(" + name + ")";
-    } : _ref2$getDisplayName, _ref2$methodName = _ref2.methodName, methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName, _ref2$renderCountProp = _ref2.renderCountProp, renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp, _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges, shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta, _ref2$storeKey = _ref2.storeKey, storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey, _ref2$withRef = _ref2.withRef, withRef = _ref2$withRef === void 0 ? false : _ref2$withRef, _ref2$forwardRef = _ref2.forwardRef, forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef, _ref2$context = _ref2.context, context = _ref2$context === void 0 ? Context_1.ReactReduxContext : _ref2$context, connectOptions = objectWithoutPropertiesLoose_1.default(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
-    invariant_1.default(renderCountProp === undefined, "renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
-    invariant_1.default(!withRef, 'withRef is removed. To access the wrapped instance, use a ref on the connected component');
+    } : _ref2$getDisplayName, _ref2$methodName = _ref2.methodName, methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName, _ref2$renderCountProp = _ref2.renderCountProp, renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp, _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges, shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta, _ref2$storeKey = _ref2.storeKey, storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey, _ref2$withRef = _ref2.withRef, withRef = _ref2$withRef === void 0 ? false : _ref2$withRef, _ref2$forwardRef = _ref2.forwardRef, forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef, _ref2$context = _ref2.context, context = _ref2$context === void 0 ? _Context.ReactReduxContext : _ref2$context, connectOptions = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
+    (0, _invariant.default)(renderCountProp === undefined, "renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
+    (0, _invariant.default)(!withRef, 'withRef is removed. To access the wrapped instance, use a ref on the connected component');
     var customStoreWarningMessage = 'To use a custom Redux store for specific components, create a custom React context with ' + "React.createContext(), and pass the context object to React Redux's Provider and specific components" + ' like: <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. ' + 'You may also pass a {context : MyContext} option to connect';
-    invariant_1.default(storeKey === 'store', 'storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
+    (0, _invariant.default)(storeKey === 'store', 'storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
     var Context = context;
     return function wrapWithConnect(WrappedComponent) {
         if (true) {
-            invariant_1.default(react_is_1.isValidElementType(WrappedComponent), "You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
+            (0, _invariant.default)((0, _reactIs.isValidElementType)(WrappedComponent), "You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
         }
         var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
         var displayName = getDisplayName(wrappedComponentName);
-        var selectorFactoryOptions = extends_1.default({}, connectOptions, {
+        var selectorFactoryOptions = (0, _extends2.default)({}, connectOptions, {
             getDisplayName: getDisplayName,
             methodName: methodName,
             renderCountProp: renderCountProp,
@@ -21093,37 +21145,37 @@ _ref) {
         } // If we aren't running in "pure" mode, we don't want to memoize values.
         // To avoid conditionally calling hooks, we fall back to a tiny wrapper
         // that just executes the given callback immediately.
-        var usePureOnlyMemo = pure ? react_1.useMemo : function (callback) {
+        var usePureOnlyMemo = pure ? _react.useMemo : function (callback) {
             return callback();
         };
         function ConnectFunction(props) {
-            var _useMemo = react_1.useMemo(function () {
+            var _useMemo = (0, _react.useMemo)(function () {
                 // Distinguish between actual "data" props that were passed to the wrapper component,
                 // and values needed to control behavior (forwarded refs, alternate context instances).
                 // To maintain the wrapperProps object reference, memoize this destructuring.
-                var context = props.context, forwardedRef = props.forwardedRef, wrapperProps = objectWithoutPropertiesLoose_1.default(props, ["context", "forwardedRef"]);
+                var context = props.context, forwardedRef = props.forwardedRef, wrapperProps = (0, _objectWithoutPropertiesLoose2.default)(props, ["context", "forwardedRef"]);
                 return [context, forwardedRef, wrapperProps];
             }, [props]), propsContext = _useMemo[0], forwardedRef = _useMemo[1], wrapperProps = _useMemo[2];
-            var ContextToUse = react_1.useMemo(function () {
+            var ContextToUse = (0, _react.useMemo)(function () {
                 // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
                 // Memoize the check that determines which context instance we should use.
-                return propsContext && propsContext.Consumer && react_is_1.isContextConsumer(react_1.default.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+                return propsContext && propsContext.Consumer && (0, _reactIs.isContextConsumer)(_react.default.createElement(propsContext.Consumer, null)) ? propsContext : Context;
             }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
-            var contextValue = react_1.useContext(ContextToUse); // The store _must_ exist as either a prop or in context
+            var contextValue = (0, _react.useContext)(ContextToUse); // The store _must_ exist as either a prop or in context
             var didStoreComeFromProps = Boolean(props.store);
             var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
-            invariant_1.default(didStoreComeFromProps || didStoreComeFromContext, "Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
+            (0, _invariant.default)(didStoreComeFromProps || didStoreComeFromContext, "Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
             var store = props.store || contextValue.store;
-            var childPropsSelector = react_1.useMemo(function () {
+            var childPropsSelector = (0, _react.useMemo)(function () {
                 // The child props selector needs the store reference as an input.
                 // Re-create this selector whenever the store changes.
                 return createChildSelector(store);
             }, [store]);
-            var _useMemo2 = react_1.useMemo(function () {
+            var _useMemo2 = (0, _react.useMemo)(function () {
                 if (!shouldHandleStateChanges)
                     return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
                 // connected to the store via props shouldn't use subscription from context, or vice versa.
-                var subscription = new Subscription_1.default(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+                var subscription = new _Subscription.default(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
                 // the middle of the notification loop, where `subscription` will then be null. This can
                 // probably be avoided if Subscription's listeners logic is changed to not call listeners
                 // that have been unsubscribed in the  middle of the notification loop.
@@ -21131,7 +21183,7 @@ _ref) {
                 return [subscription, notifyNestedSubs];
             }, [store, didStoreComeFromProps, contextValue]), subscription = _useMemo2[0], notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
             // and memoize that value to avoid unnecessary context updates.
-            var overriddenContextValue = react_1.useMemo(function () {
+            var overriddenContextValue = (0, _react.useMemo)(function () {
                 if (didStoreComeFromProps) {
                     // This component is directly subscribed to a store from props.
                     // We don't want descendants reading from this store - pass down whatever
@@ -21139,18 +21191,18 @@ _ref) {
                     return contextValue;
                 } // Otherwise, put this component's subscription instance into context, so that
                 // connected descendants won't update until after this component is done
-                return extends_1.default({}, contextValue, {
+                return (0, _extends2.default)({}, contextValue, {
                     subscription: subscription
                 });
             }, [didStoreComeFromProps, contextValue, subscription]); // We need to force this wrapper component to re-render whenever a Redux store update
             // causes a change to the calculated child component props (or we caught an error in mapState)
-            var _useReducer = react_1.useReducer(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates), _useReducer$ = _useReducer[0], previousStateUpdateResult = _useReducer$[0], forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
+            var _useReducer = (0, _react.useReducer)(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates), _useReducer$ = _useReducer[0], previousStateUpdateResult = _useReducer$[0], forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
             if (previousStateUpdateResult && previousStateUpdateResult.error) {
                 throw previousStateUpdateResult.error;
             } // Set up refs to coordinate values between the subscription effect and the render logic
-            var lastChildProps = react_1.useRef();
-            var lastWrapperProps = react_1.useRef(wrapperProps);
-            var childPropsFromStoreUpdate = react_1.useRef();
+            var lastChildProps = (0, _react.useRef)();
+            var lastWrapperProps = (0, _react.useRef)(wrapperProps);
+            var childPropsFromStoreUpdate = (0, _react.useRef)();
             var actualChildProps = usePureOnlyMemo(function () {
                 // Tricky logic here:
                 // - This render may have been triggered by a Redux store update that produced new child props
@@ -21177,7 +21229,7 @@ _ref) {
                     notifyNestedSubs();
                 }
             }); // Our re-subscribe logic only runs when the store/subscription setup changes
-            react_1.useEffect(function () {
+            (0, _react.useEffect)(function () {
                 // If we're not subscribed to the store, nothing to do here
                 if (!shouldHandleStateChanges)
                     return; // Capture values for checking if and when this component unmounts
@@ -21243,16 +21295,16 @@ _ref) {
             // We memoize the elements for the rendered child component as an optimization.
             // If React sees the exact same element reference as last time, it bails out of re-rendering
             // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
-            var renderedChild = react_1.useMemo(function () {
+            var renderedChild = (0, _react.useMemo)(function () {
                 // Render the actual child component
-                var renderedWrappedComponent = react_1.default.createElement(WrappedComponent, extends_1.default({}, actualChildProps, {
+                var renderedWrappedComponent = _react.default.createElement(WrappedComponent, (0, _extends2.default)({}, actualChildProps, {
                     ref: forwardedRef
                 }));
                 if (shouldHandleStateChanges) {
                     // If this component is subscribed to store updates, we need to pass its own
                     // subscription instance down to our descendants. That means rendering the same
                     // Context instance, and putting a different value into the context.
-                    return react_1.default.createElement(ContextToUse.Provider, {
+                    return _react.default.createElement(ContextToUse.Provider, {
                         value: overriddenContextValue
                     }, renderedWrappedComponent);
                 }
@@ -21260,45 +21312,47 @@ _ref) {
             }, [ContextToUse, WrappedComponent, actualChildProps, forwardedRef, overriddenContextValue]);
             return renderedChild;
         } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
-        var Connect = pure ? react_1.default.memo(ConnectFunction) : ConnectFunction;
+        var Connect = pure ? _react.default.memo(ConnectFunction) : ConnectFunction;
         Connect.WrappedComponent = WrappedComponent;
         Connect.displayName = displayName;
         if (forwardRef) {
-            var forwarded = react_1.default.forwardRef(function forwardConnectRef(props, ref) {
-                return react_1.default.createElement(Connect, extends_1.default({}, props, {
+            var forwarded = _react.default.forwardRef(function forwardConnectRef(props, ref) {
+                return _react.default.createElement(Connect, (0, _extends2.default)({}, props, {
                     forwardedRef: ref
                 }));
             });
             forwarded.displayName = displayName;
             forwarded.WrappedComponent = WrappedComponent;
-            return hoist_non_react_statics_1.default(forwarded, WrappedComponent);
+            return (0, _hoistNonReactStatics.default)(forwarded, WrappedComponent);
         }
-        return hoist_non_react_statics_1.default(Connect, WrappedComponent);
+        return (0, _hoistNonReactStatics.default)(Connect, WrappedComponent);
     };
 }
-exports.default = connectAdvanced;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/connect.js":
-/*!********************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/connect.js ***!
-  \********************************************************/
+/***/ "./node_modules/react-redux/lib/connect/connect.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/connect.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var extends_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-var objectWithoutPropertiesLoose_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-var connectAdvanced_1 = __webpack_require__(/*! ../components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
-var shallowEqual_1 = __webpack_require__(/*! ../utils/shallowEqual */ "./node_modules/react-redux/es/utils/shallowEqual.js");
-var mapDispatchToProps_1 = __webpack_require__(/*! ./mapDispatchToProps */ "./node_modules/react-redux/es/connect/mapDispatchToProps.js");
-var mapStateToProps_1 = __webpack_require__(/*! ./mapStateToProps */ "./node_modules/react-redux/es/connect/mapStateToProps.js");
-var mergeProps_1 = __webpack_require__(/*! ./mergeProps */ "./node_modules/react-redux/es/connect/mergeProps.js");
-var selectorFactory_1 = __webpack_require__(/*! ./selectorFactory */ "./node_modules/react-redux/es/connect/selectorFactory.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.createConnect = createConnect;
+exports.default = void 0;
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+var _connectAdvanced = _interopRequireDefault(__webpack_require__(/*! ../components/connectAdvanced */ "./node_modules/react-redux/lib/components/connectAdvanced.js"));
+var _shallowEqual = _interopRequireDefault(__webpack_require__(/*! ../utils/shallowEqual */ "./node_modules/react-redux/lib/utils/shallowEqual.js"));
+var _mapDispatchToProps = _interopRequireDefault(__webpack_require__(/*! ./mapDispatchToProps */ "./node_modules/react-redux/lib/connect/mapDispatchToProps.js"));
+var _mapStateToProps = _interopRequireDefault(__webpack_require__(/*! ./mapStateToProps */ "./node_modules/react-redux/lib/connect/mapStateToProps.js"));
+var _mergeProps = _interopRequireDefault(__webpack_require__(/*! ./mergeProps */ "./node_modules/react-redux/lib/connect/mergeProps.js"));
+var _selectorFactory = _interopRequireDefault(__webpack_require__(/*! ./selectorFactory */ "./node_modules/react-redux/lib/connect/selectorFactory.js"));
 /*
   connect is a facade over connectAdvanced. It turns its args into a compatible
   selectorFactory, which has the signature:
@@ -21330,16 +21384,16 @@ function strictEqual(a, b) {
 } // createConnect with default args builds the 'official' connect behavior. Calling it with
 // different options opens up some testing and extensibility scenarios
 function createConnect(_temp) {
-    var _ref = _temp === void 0 ? {} : _temp, _ref$connectHOC = _ref.connectHOC, connectHOC = _ref$connectHOC === void 0 ? connectAdvanced_1.default : _ref$connectHOC, _ref$mapStateToPropsF = _ref.mapStateToPropsFactories, mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? mapStateToProps_1.default : _ref$mapStateToPropsF, _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories, mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? mapDispatchToProps_1.default : _ref$mapDispatchToPro, _ref$mergePropsFactor = _ref.mergePropsFactories, mergePropsFactories = _ref$mergePropsFactor === void 0 ? mergeProps_1.default : _ref$mergePropsFactor, _ref$selectorFactory = _ref.selectorFactory, selectorFactory = _ref$selectorFactory === void 0 ? selectorFactory_1.default : _ref$selectorFactory;
+    var _ref = _temp === void 0 ? {} : _temp, _ref$connectHOC = _ref.connectHOC, connectHOC = _ref$connectHOC === void 0 ? _connectAdvanced.default : _ref$connectHOC, _ref$mapStateToPropsF = _ref.mapStateToPropsFactories, mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToProps.default : _ref$mapStateToPropsF, _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories, mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToProps.default : _ref$mapDispatchToPro, _ref$mergePropsFactor = _ref.mergePropsFactories, mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergeProps.default : _ref$mergePropsFactor, _ref$selectorFactory = _ref.selectorFactory, selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactory.default : _ref$selectorFactory;
     return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
         if (_ref2 === void 0) {
             _ref2 = {};
         }
-        var _ref3 = _ref2, _ref3$pure = _ref3.pure, pure = _ref3$pure === void 0 ? true : _ref3$pure, _ref3$areStatesEqual = _ref3.areStatesEqual, areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual, _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual, areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? shallowEqual_1.default : _ref3$areOwnPropsEqua, _ref3$areStatePropsEq = _ref3.areStatePropsEqual, areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? shallowEqual_1.default : _ref3$areStatePropsEq, _ref3$areMergedPropsE = _ref3.areMergedPropsEqual, areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? shallowEqual_1.default : _ref3$areMergedPropsE, extraOptions = objectWithoutPropertiesLoose_1.default(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
+        var _ref3 = _ref2, _ref3$pure = _ref3.pure, pure = _ref3$pure === void 0 ? true : _ref3$pure, _ref3$areStatesEqual = _ref3.areStatesEqual, areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual, _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual, areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _shallowEqual.default : _ref3$areOwnPropsEqua, _ref3$areStatePropsEq = _ref3.areStatePropsEqual, areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _shallowEqual.default : _ref3$areStatePropsEq, _ref3$areMergedPropsE = _ref3.areMergedPropsEqual, areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _shallowEqual.default : _ref3$areMergedPropsE, extraOptions = (0, _objectWithoutPropertiesLoose2.default)(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
         var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
         var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
         var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
-        return connectHOC(selectorFactory, extends_1.default({
+        return connectHOC(selectorFactory, (0, _extends2.default)({
             // used in error messages
             methodName: 'connect',
             // used to compute Connect's displayName from the wrapped component's displayName.
@@ -21360,89 +21414,98 @@ function createConnect(_temp) {
         }, extraOptions));
     };
 }
-exports.createConnect = createConnect;
-exports.default = createConnect();
+var _default = createConnect();
+exports.default = _default;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/mapDispatchToProps.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/mapDispatchToProps.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/react-redux/lib/connect/mapDispatchToProps.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/mapDispatchToProps.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var redux_1 = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-var wrapMapToProps_1 = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
-function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
-    return typeof mapDispatchToProps === 'function' ? wrapMapToProps_1.wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
-}
+exports.__esModule = true;
 exports.whenMapDispatchToPropsIsFunction = whenMapDispatchToPropsIsFunction;
+exports.whenMapDispatchToPropsIsMissing = whenMapDispatchToPropsIsMissing;
+exports.whenMapDispatchToPropsIsObject = whenMapDispatchToPropsIsObject;
+exports.default = void 0;
+var _redux = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+var _wrapMapToProps = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/lib/connect/wrapMapToProps.js");
+function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+    return typeof mapDispatchToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+}
 function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
-    return !mapDispatchToProps ? wrapMapToProps_1.wrapMapToPropsConstant(function (dispatch) {
+    return !mapDispatchToProps ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function (dispatch) {
         return {
             dispatch: dispatch
         };
     }) : undefined;
 }
-exports.whenMapDispatchToPropsIsMissing = whenMapDispatchToPropsIsMissing;
 function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
-    return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? wrapMapToProps_1.wrapMapToPropsConstant(function (dispatch) {
-        return redux_1.bindActionCreators(mapDispatchToProps, dispatch);
+    return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function (dispatch) {
+        return (0, _redux.bindActionCreators)(mapDispatchToProps, dispatch);
     }) : undefined;
 }
-exports.whenMapDispatchToPropsIsObject = whenMapDispatchToPropsIsObject;
-exports.default = [whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject];
+var _default = [whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject];
+exports.default = _default;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/mapStateToProps.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/mapStateToProps.js ***!
-  \****************************************************************/
+/***/ "./node_modules/react-redux/lib/connect/mapStateToProps.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/mapStateToProps.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var wrapMapToProps_1 = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
-function whenMapStateToPropsIsFunction(mapStateToProps) {
-    return typeof mapStateToProps === 'function' ? wrapMapToProps_1.wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
-}
+exports.__esModule = true;
 exports.whenMapStateToPropsIsFunction = whenMapStateToPropsIsFunction;
+exports.whenMapStateToPropsIsMissing = whenMapStateToPropsIsMissing;
+exports.default = void 0;
+var _wrapMapToProps = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/lib/connect/wrapMapToProps.js");
+function whenMapStateToPropsIsFunction(mapStateToProps) {
+    return typeof mapStateToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapStateToProps, 'mapStateToProps') : undefined;
+}
 function whenMapStateToPropsIsMissing(mapStateToProps) {
-    return !mapStateToProps ? wrapMapToProps_1.wrapMapToPropsConstant(function () {
+    return !mapStateToProps ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function () {
         return {};
     }) : undefined;
 }
-exports.whenMapStateToPropsIsMissing = whenMapStateToPropsIsMissing;
-exports.default = [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing];
+var _default = [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing];
+exports.default = _default;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/mergeProps.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/mergeProps.js ***!
-  \***********************************************************/
+/***/ "./node_modules/react-redux/lib/connect/mergeProps.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/mergeProps.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var extends_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-var verifyPlainObject_1 = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
-function defaultMergeProps(stateProps, dispatchProps, ownProps) {
-    return extends_1.default({}, ownProps, stateProps, dispatchProps);
-}
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
 exports.defaultMergeProps = defaultMergeProps;
+exports.wrapMergePropsFunc = wrapMergePropsFunc;
+exports.whenMergePropsIsFunction = whenMergePropsIsFunction;
+exports.whenMergePropsIsOmitted = whenMergePropsIsOmitted;
+exports.default = void 0;
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+var _verifyPlainObject = _interopRequireDefault(__webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/lib/utils/verifyPlainObject.js"));
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+    return (0, _extends2.default)({}, ownProps, stateProps, dispatchProps);
+}
 function wrapMergePropsFunc(mergeProps) {
     return function initMergePropsProxy(dispatch, _ref) {
         var displayName = _ref.displayName, pure = _ref.pure, areMergedPropsEqual = _ref.areMergedPropsEqual;
@@ -21458,46 +21521,47 @@ function wrapMergePropsFunc(mergeProps) {
                 hasRunOnce = true;
                 mergedProps = nextMergedProps;
                 if (true)
-                    verifyPlainObject_1.default(mergedProps, displayName, 'mergeProps');
+                    (0, _verifyPlainObject.default)(mergedProps, displayName, 'mergeProps');
             }
             return mergedProps;
         };
     };
 }
-exports.wrapMergePropsFunc = wrapMergePropsFunc;
 function whenMergePropsIsFunction(mergeProps) {
     return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
 }
-exports.whenMergePropsIsFunction = whenMergePropsIsFunction;
 function whenMergePropsIsOmitted(mergeProps) {
     return !mergeProps ? function () {
         return defaultMergeProps;
     } : undefined;
 }
-exports.whenMergePropsIsOmitted = whenMergePropsIsOmitted;
-exports.default = [whenMergePropsIsFunction, whenMergePropsIsOmitted];
+var _default = [whenMergePropsIsFunction, whenMergePropsIsOmitted];
+exports.default = _default;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/selectorFactory.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/selectorFactory.js ***!
-  \****************************************************************/
+/***/ "./node_modules/react-redux/lib/connect/selectorFactory.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/selectorFactory.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var objectWithoutPropertiesLoose_1 = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-var verifySubselectors_1 = __webpack_require__(/*! ./verifySubselectors */ "./node_modules/react-redux/es/connect/verifySubselectors.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.impureFinalPropsSelectorFactory = impureFinalPropsSelectorFactory;
+exports.pureFinalPropsSelectorFactory = pureFinalPropsSelectorFactory;
+exports.default = finalPropsSelectorFactory;
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+var _verifySubselectors = _interopRequireDefault(__webpack_require__(/*! ./verifySubselectors */ "./node_modules/react-redux/lib/connect/verifySubselectors.js"));
 function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
     return function impureFinalPropsSelector(state, ownProps) {
         return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
     };
 }
-exports.impureFinalPropsSelectorFactory = impureFinalPropsSelectorFactory;
 function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
     var areStatesEqual = _ref.areStatesEqual, areOwnPropsEqual = _ref.areOwnPropsEqual, areStatePropsEqual = _ref.areStatePropsEqual;
     var hasRunAtLeastOnce = false;
@@ -21555,45 +21619,45 @@ function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, merg
         return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
     };
 } // TODO: Add more comments
-exports.pureFinalPropsSelectorFactory = pureFinalPropsSelectorFactory;
 // If pure is true, the selector returned by selectorFactory will memoize its results,
 // allowing connectAdvanced's shouldComponentUpdate to return false if final
 // props have not changed. If false, the selector will always return a new
 // object and shouldComponentUpdate will always return true.
 function finalPropsSelectorFactory(dispatch, _ref2) {
-    var initMapStateToProps = _ref2.initMapStateToProps, initMapDispatchToProps = _ref2.initMapDispatchToProps, initMergeProps = _ref2.initMergeProps, options = objectWithoutPropertiesLoose_1.default(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
+    var initMapStateToProps = _ref2.initMapStateToProps, initMapDispatchToProps = _ref2.initMapDispatchToProps, initMergeProps = _ref2.initMergeProps, options = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
     var mapStateToProps = initMapStateToProps(dispatch, options);
     var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
     var mergeProps = initMergeProps(dispatch, options);
     if (true) {
-        verifySubselectors_1.default(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
+        (0, _verifySubselectors.default)(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
     }
     var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
     return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
 }
-exports.default = finalPropsSelectorFactory;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/verifySubselectors.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/verifySubselectors.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/react-redux/lib/connect/verifySubselectors.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/verifySubselectors.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var warning_1 = __webpack_require__(/*! ../utils/warning */ "./node_modules/react-redux/es/utils/warning.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.default = verifySubselectors;
+var _warning = _interopRequireDefault(__webpack_require__(/*! ../utils/warning */ "./node_modules/react-redux/lib/utils/warning.js"));
 function verify(selector, methodName, displayName) {
     if (!selector) {
         throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
     }
     else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
         if (!selector.hasOwnProperty('dependsOnOwnProps')) {
-            warning_1.default("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+            (0, _warning.default)("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
         }
     }
 }
@@ -21602,22 +21666,25 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
     verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
     verify(mergeProps, 'mergeProps', displayName);
 }
-exports.default = verifySubselectors;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/connect/wrapMapToProps.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/react-redux/es/connect/wrapMapToProps.js ***!
-  \***************************************************************/
+/***/ "./node_modules/react-redux/lib/connect/wrapMapToProps.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/lib/connect/wrapMapToProps.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var verifyPlainObject_1 = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.wrapMapToPropsConstant = wrapMapToPropsConstant;
+exports.getDependsOnOwnProps = getDependsOnOwnProps;
+exports.wrapMapToPropsFunc = wrapMapToPropsFunc;
+var _verifyPlainObject = _interopRequireDefault(__webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/lib/utils/verifyPlainObject.js"));
 function wrapMapToPropsConstant(getConstant) {
     return function initConstantSelector(dispatch, options) {
         var constant = getConstant(dispatch, options);
@@ -21628,7 +21695,6 @@ function wrapMapToPropsConstant(getConstant) {
         return constantSelector;
     };
 } // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
-exports.wrapMapToPropsConstant = wrapMapToPropsConstant;
 // to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
 // whether mapToProps needs to be invoked when props have changed.
 //
@@ -21638,7 +21704,6 @@ exports.wrapMapToPropsConstant = wrapMapToPropsConstant;
 function getDependsOnOwnProps(mapToProps) {
     return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
 } // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
-exports.getDependsOnOwnProps = getDependsOnOwnProps;
 // this function wraps mapToProps in a proxy function which does several things:
 //
 //  * Detects whether the mapToProps function being called depends on props, which
@@ -21667,54 +21732,56 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
                 props = proxy(stateOrDispatch, ownProps);
             }
             if (true)
-                verifyPlainObject_1.default(props, displayName, methodName);
+                (0, _verifyPlainObject.default)(props, displayName, methodName);
             return props;
         };
         return proxy;
     };
 }
-exports.wrapMapToPropsFunc = wrapMapToPropsFunc;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/react-redux/es/index.js ***!
-  \**********************************************/
+/***/ "./node_modules/react-redux/lib/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/react-redux/lib/index.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var Provider_1 = __webpack_require__(/*! ./components/Provider */ "./node_modules/react-redux/es/components/Provider.js");
-exports.Provider = Provider_1.default;
-var connectAdvanced_1 = __webpack_require__(/*! ./components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
-exports.connectAdvanced = connectAdvanced_1.default;
-var Context_1 = __webpack_require__(/*! ./components/Context */ "./node_modules/react-redux/es/components/Context.js");
-exports.ReactReduxContext = Context_1.ReactReduxContext;
-var connect_1 = __webpack_require__(/*! ./connect/connect */ "./node_modules/react-redux/es/connect/connect.js");
-exports.connect = connect_1.default;
-var batch_1 = __webpack_require__(/*! ./utils/batch */ "./node_modules/react-redux/es/utils/batch.js");
-var reactBatchedUpdates_1 = __webpack_require__(/*! ./utils/reactBatchedUpdates */ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js");
-exports.batch = reactBatchedUpdates_1.unstable_batchedUpdates;
-batch_1.setBatch(reactBatchedUpdates_1.unstable_batchedUpdates);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+var _Provider = _interopRequireDefault(__webpack_require__(/*! ./components/Provider */ "./node_modules/react-redux/lib/components/Provider.js"));
+exports.Provider = _Provider.default;
+var _connectAdvanced = _interopRequireDefault(__webpack_require__(/*! ./components/connectAdvanced */ "./node_modules/react-redux/lib/components/connectAdvanced.js"));
+exports.connectAdvanced = _connectAdvanced.default;
+var _Context = __webpack_require__(/*! ./components/Context */ "./node_modules/react-redux/lib/components/Context.js");
+exports.ReactReduxContext = _Context.ReactReduxContext;
+var _connect = _interopRequireDefault(__webpack_require__(/*! ./connect/connect */ "./node_modules/react-redux/lib/connect/connect.js"));
+exports.connect = _connect.default;
+var _batch = __webpack_require__(/*! ./utils/batch */ "./node_modules/react-redux/lib/utils/batch.js");
+var _reactBatchedUpdates = __webpack_require__(/*! ./utils/reactBatchedUpdates */ "./node_modules/react-redux/lib/utils/reactBatchedUpdates.js");
+exports.batch = _reactBatchedUpdates.unstable_batchedUpdates;
+(0, _batch.setBatch)(_reactBatchedUpdates.unstable_batchedUpdates);
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/Subscription.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/Subscription.js ***!
-  \***********************************************************/
+/***/ "./node_modules/react-redux/lib/utils/Subscription.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/Subscription.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var batch_1 = __webpack_require__(/*! ./batch */ "./node_modules/react-redux/es/utils/batch.js"); // encapsulates the subscription logic for connecting a component to the redux store, as
+exports.__esModule = true;
+exports.default = void 0;
+var _batch = __webpack_require__(/*! ./batch */ "./node_modules/react-redux/lib/utils/batch.js");
+// encapsulates the subscription logic for connecting a component to the redux store, as
 // well as nesting subscriptions of descendant components, so that we can ensure the
 // ancestor components re-render before descendants
 var CLEARED = null;
@@ -21722,7 +21789,7 @@ var nullListeners = {
     notify: function notify() { }
 };
 function createListenerCollection() {
-    var batch = batch_1.getBatch(); // the current/next pattern is copied from redux's createStore code.
+    var batch = (0, _batch.getBatch)(); // the current/next pattern is copied from redux's createStore code.
     // TODO: refactor+expose that code to be reusable here?
     var current = [];
     var next = [];
@@ -21805,41 +21872,45 @@ exports.default = Subscription;
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/batch.js":
-/*!****************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/batch.js ***!
-  \****************************************************/
+/***/ "./node_modules/react-redux/lib/utils/batch.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/batch.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+exports.getBatch = exports.setBatch = void 0;
 // Default to a dummy "batch" implementation that just runs the callback
 function defaultNoopBatch(callback) {
     callback();
 }
 var batch = defaultNoopBatch; // Allow injecting another batching function later
-exports.setBatch = function setBatch(newBatch) {
+var setBatch = function setBatch(newBatch) {
     return batch = newBatch;
 }; // Supply a getter just to skip dealing with ESM bindings
-exports.getBatch = function getBatch() {
+exports.setBatch = setBatch;
+var getBatch = function getBatch() {
     return batch;
 };
+exports.getBatch = getBatch;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/isPlainObject.js":
-/*!************************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/isPlainObject.js ***!
-  \************************************************************/
+/***/ "./node_modules/react-redux/lib/utils/isPlainObject.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/isPlainObject.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+exports.default = isPlainObject;
 /**
  * @param {any} obj The object to inspect.
  * @returns {boolean} True if the argument appears to be a plain object.
@@ -21856,38 +21927,38 @@ function isPlainObject(obj) {
     }
     return proto === baseProto;
 }
-exports.default = isPlainObject;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/reactBatchedUpdates.js ***!
-  \******************************************************************/
+/***/ "./node_modules/react-redux/lib/utils/reactBatchedUpdates.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/reactBatchedUpdates.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-/* eslint-disable import/no-unresolved */
-var react_dom_1 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-exports.unstable_batchedUpdates = react_dom_1.unstable_batchedUpdates;
+exports.__esModule = true;
+exports.unstable_batchedUpdates = void 0;
+var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+exports.unstable_batchedUpdates = _reactDom.unstable_batchedUpdates;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/shallowEqual.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/shallowEqual.js ***!
-  \***********************************************************/
+/***/ "./node_modules/react-redux/lib/utils/shallowEqual.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/shallowEqual.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+exports.default = shallowEqual;
 var hasOwn = Object.prototype.hasOwnProperty;
 function is(x, y) {
     if (x === y) {
@@ -21914,43 +21985,44 @@ function shallowEqual(objA, objB) {
     }
     return true;
 }
-exports.default = shallowEqual;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/verifyPlainObject.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/verifyPlainObject.js ***!
-  \****************************************************************/
+/***/ "./node_modules/react-redux/lib/utils/verifyPlainObject.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/verifyPlainObject.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var isPlainObject_1 = __webpack_require__(/*! ./isPlainObject */ "./node_modules/react-redux/es/utils/isPlainObject.js");
-var warning_1 = __webpack_require__(/*! ./warning */ "./node_modules/react-redux/es/utils/warning.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.default = verifyPlainObject;
+var _isPlainObject = _interopRequireDefault(__webpack_require__(/*! ./isPlainObject */ "./node_modules/react-redux/lib/utils/isPlainObject.js"));
+var _warning = _interopRequireDefault(__webpack_require__(/*! ./warning */ "./node_modules/react-redux/lib/utils/warning.js"));
 function verifyPlainObject(value, displayName, methodName) {
-    if (!isPlainObject_1.default(value)) {
-        warning_1.default(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+    if (!(0, _isPlainObject.default)(value)) {
+        (0, _warning.default)(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
     }
 }
-exports.default = verifyPlainObject;
 
 
 /***/ }),
 
-/***/ "./node_modules/react-redux/es/utils/warning.js":
-/*!******************************************************!*\
-  !*** ./node_modules/react-redux/es/utils/warning.js ***!
-  \******************************************************/
+/***/ "./node_modules/react-redux/lib/utils/warning.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-redux/lib/utils/warning.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+exports.default = warning;
 /**
  * Prints a warning in the console if it exists.
  *
@@ -21973,7 +22045,6 @@ function warning(message) {
     catch (e) { }
     /* eslint-enable no-empty */
 }
-exports.default = warning;
 
 
 /***/ }),
@@ -25595,7 +25666,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+var lib_1 = __webpack_require__(/*! react-redux/lib */ "./node_modules/react-redux/lib/index.js");
 var redux_1 = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 var todos_1 = __webpack_require__(/*! ../actions/todos */ "./src/actions/todos.ts");
 var mapDispatchToProps = function (dispatch) {
@@ -25630,7 +25701,7 @@ var TodoInput = /** @class */ (function (_super) {
     };
     return TodoInput;
 }(React.Component));
-exports.default = react_redux_1.connect(null, mapDispatchToProps)(TodoInput);
+exports.default = lib_1.connect(null, mapDispatchToProps)(TodoInput);
 
 
 /***/ }),
@@ -25683,7 +25754,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+var lib_1 = __webpack_require__(/*! react-redux/lib */ "./node_modules/react-redux/lib/index.js");
 var TodoItem_1 = __webpack_require__(/*! ./TodoItem */ "./src/components/TodoItem.tsx");
 var mapStateToProps = function (state) {
     return {
@@ -25700,7 +25771,7 @@ var TodoList = /** @class */ (function (_super) {
     };
     return TodoList;
 }(React.Component));
-exports.default = react_redux_1.connect(mapStateToProps)(TodoList);
+exports.default = lib_1.connect(mapStateToProps)(TodoList);
 
 
 /***/ }),
@@ -25749,11 +25820,11 @@ var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/in
 var redux_1 = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 var redux_thunk_1 = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
 var redux_devtools_extension_1 = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");
-var react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+var lib_1 = __webpack_require__(/*! react-redux/lib */ "./node_modules/react-redux/lib/index.js");
 var reducers_1 = __webpack_require__(/*! ./reducers */ "./src/reducers/index.ts");
 var App_1 = __webpack_require__(/*! ./components/App */ "./src/components/App.tsx");
 var store = redux_1.createStore(redux_1.combineReducers(__assign({}, reducers_1.default)), redux_devtools_extension_1.composeWithDevTools(redux_1.applyMiddleware(redux_thunk_1.default)));
-ReactDOM.render((React.createElement(react_redux_1.Provider, { store: store },
+ReactDOM.render((React.createElement(lib_1.Provider, { store: store },
     React.createElement(App_1.default, null))), document.getElementById('app'));
 
 
