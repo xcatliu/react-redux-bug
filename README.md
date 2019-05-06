@@ -1,5 +1,7 @@
 # Report a bug from react-redux
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xcatliu/react-redux-bug.svg)](https://greenkeeper.io/)
+
 Related issue: https://github.com/reduxjs/react-redux/issues/1230
 
 This project builds a simplest TODO App with:
